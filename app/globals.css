@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #0a0908;
+  --color-paper-2: #121110;
+  --color-paper-3: #1c1a17;
+  --color-ink: #ede6d3;
+  --color-ink-soft: #b8b0a0;
+  --color-ink-dim: #6f6a5e;
+  --color-gold: #c9a86a;
+  --color-gold-hi: #e8d4a0;
+  --color-gold-lo: #8c7043;
+  --color-rule: rgba(201, 168, 106, 0.18);
+
+  --font-display: var(--font-fraunces);
+  --font-serif: var(--font-instrument);
+  --font-mono: var(--font-mono);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+  }
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  body {
+    background:
+      radial-gradient(
+        1100px 700px at 85% -10%,
+        rgba(201, 168, 106, 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 600px at -10% 110%,
+        rgba(201, 168, 106, 0.05),
+        transparent 60%
+      ),
+      var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-display), "Times New Roman", serif;
+    font-feature-settings:
+      "ss01" on,
+      "ss02" on;
+    letter-spacing: -0.005em;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-paper);
+  }
+  a {
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-feature-settings: "calt" 1;
+    letter-spacing: 0.04em;
+  }
+  .serif-italic {
+    font-family: var(--font-serif), "Times New Roman", serif;
+    font-style: italic;
+  }
+  .hairline {
+    background: var(--color-rule);
+    height: 1px;
+  }
+  .hairline-v {
+    background: var(--color-rule);
+    width: 1px;
+  }
+  .label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+  .gold-text {
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-hi) 0%,
+      var(--color-gold) 55%,
+      var(--color-gold-lo) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Film grain overlay — SVG noise, fixed position */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Vignette */
+.vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 42s linear infinite;
+  will-change: transform;
+}
+
+/* Gentle ken-burns */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(-1%, -1%, 0);
+  }
+}
+.kb {
+  animation: kenburns 18s ease-in-out infinite alternate;
+}
+
+/* Blinking record dot */
+@keyframes rec {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0.15;
+  }
+}
+.rec-dot {
+  animation: rec 1.4s infinite;
+}
+
+/* Waveform line flow */
+@keyframes wave-flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-140px);
+  }
+}
+.wave-flow {
+  animation: wave-flow 6s linear infinite;
+}
+
+/* Section number hover — underline sweep */
+.sweep {
+  position: relative;
+}
+.sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--color-gold);
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sweep:hover::after {
+  width: 100%;
+}
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
 }
