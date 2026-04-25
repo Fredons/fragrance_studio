@@ -41,6 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 # local smoke artifacts
-_smoke.py
-_shot_*.png
+_*.py
+_*.png
 dev.log
