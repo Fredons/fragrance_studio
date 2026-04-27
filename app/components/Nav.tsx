@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -77,20 +78,14 @@ export function Nav() {
       >
         <div className="mx-auto max-w-[1400px] px-5 md:px-10 h-14 flex items-center justify-between">
           <Link href="/" aria-label="Fragrance Studios — Home" className="flex items-center gap-3 shrink-0">
-            <svg width="24" height="24" viewBox="0 0 22 22" aria-hidden>
-              <circle cx="11" cy="11" r="10" stroke="var(--color-gold)" strokeWidth="1" fill="none" />
-              <text
-                x="11"
-                y="15"
-                textAnchor="middle"
-                fontFamily="var(--font-display), serif"
-                fontSize="11"
-                fontWeight="600"
-                fill="var(--color-gold)"
-              >
-                FS
-              </text>
-            </svg>
+            <Image
+              src="/brand/logo-mark.png"
+              alt=""
+              width={56}
+              height={56}
+              priority
+              className="w-7 h-7 md:w-8 md:h-8"
+            />
             <span className="mono text-[10px] tracking-[0.28em] text-ink-soft uppercase hidden sm:inline">
               Fragrance Studios · Abuja
             </span>

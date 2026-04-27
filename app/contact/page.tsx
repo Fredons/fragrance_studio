@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Contact · Fragrance Studios",
     description: "Book a session at Fragrance Studios, Abuja.",
     url: "/contact",
-    images: ["/brand/logo-wall.jpg"],
+    images: ["/brand/logo-og.jpg"],
   },
 };
 

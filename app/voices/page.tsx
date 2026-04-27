@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       "What artists say about recording at Fragrance Studios in Abuja.",
     url: "/voices",
-    images: ["/brand/logo-wall.jpg"],
+    images: ["/brand/logo-og.jpg"],
   },
 };
 

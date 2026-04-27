@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Recording. Production. Mixing. Mastering. Made with the patience of a craftsman and the ear of a listener.",
     images: [
       {
-        url: "/brand/logo-wall.jpg",
+        url: "/brand/logo-og.jpg",
         width: 1200,
         height: 630,
         alt: "Fragrance Studios — Abuja",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Fragrance Studios — A Recording House in Abuja",
     description:
       "Recording, production, mixing and mastering in Abuja, Nigeria.",
-    images: ["/brand/logo-wall.jpg"],
+    images: ["/brand/logo-og.jpg"],
   },
   alternates: {
     canonical: "/",
