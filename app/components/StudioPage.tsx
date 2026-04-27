@@ -17,10 +17,10 @@ type Plate = {
 
 const plates: Plate[] = [
   {
-    src: "/studio/control-room.jpg",
-    alt: "Control Room A — the desk and FS logo wall",
+    src: "/studio/control-room-wide.jpg",
+    alt: "Control Room A — wide angle showing the FS wall, console, weighted keys and live corner",
     caption: "Plate I · Control Room A",
-    code: "FS.R01 · 50mm · f/2.8",
+    code: "FS.R01 · 24mm · f/2.8",
     span: "wide",
     note: "The room where mixes are made.",
   },

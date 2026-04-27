@@ -24,10 +24,10 @@ export function Producer() {
           >
             <div className="relative w-full h-[520px] md:h-[760px] overflow-hidden bg-paper-2">
               <Image
-                src="/portraits/godwin.png"
-                alt="Godwin Owulo — producer in residence"
+                src="/portraits/godwin-at-keys.jpg"
+                alt="Godwin Owulo at the keys, in session"
                 fill
-                className="object-cover object-[center_25%]"
+                className="object-cover object-center"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
@@ -42,10 +42,10 @@ export function Producer() {
 
             <div className="mt-4 flex items-center justify-between">
               <span className="mono text-[10px] tracking-[0.28em] uppercase text-ink-soft">
-                Portrait · Abuja · Monochrome
+                In Session · Abuja
               </span>
               <span className="mono text-[10px] tracking-[0.28em] uppercase text-ink-dim">
-                Plate VI · f/2.0 · 85mm
+                Plate VI · f/2.8 · 35mm
               </span>
             </div>
           </motion.div>
