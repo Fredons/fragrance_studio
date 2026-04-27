@@ -1,11 +1,13 @@
+import { SITE_URL } from "@/app/lib/site";
+
 export function JsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "MusicGroup",
-    "@id": "https://fragrancestudios.ng/#studio",
+    "@id": `${SITE_URL}/#studio`,
     name: "Fragrance Studios",
     alternateName: "Fragrance Studios Abuja",
-    url: "https://fragrancestudios.ng",
+    url: SITE_URL,
     description:
       "A recording, production, mixing and mastering studio in Abuja, Nigeria.",
     foundingLocation: {

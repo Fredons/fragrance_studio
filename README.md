@@ -34,7 +34,16 @@ A few values live in code rather than env vars:
 
 - `studioPhone` in `app/components/ContactPage.tsx` — set this to the WhatsApp number (e.g. `2348012345678`) once confirmed.
 - `studioEmail` in `app/components/ContactPage.tsx` and the links in `app/components/Footer.tsx`.
-- `SITE_URL` in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` — set to the final domain.
+
+Site URL (used by metadata, sitemap, robots and JSON-LD) is resolved by
+`app/lib/site.ts` in this order:
+
+1. `NEXT_PUBLIC_SITE_URL` — explicit override. Set this in Vercel env vars
+   when the custom domain goes live (e.g. `https://fragrancestudios.ng`).
+2. `VERCEL_PROJECT_PRODUCTION_URL` — auto-injected by Vercel; resolves to
+   the production alias (e.g. `fragrance-studio.vercel.app`).
+3. `VERCEL_URL` — per-deployment fallback.
+4. `http://localhost:3000` — local dev fallback.
 
 ## Stack
 

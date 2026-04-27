@@ -5,6 +5,7 @@ import { Grain } from "./components/Grain";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { JsonLd } from "./components/JsonLd";
+import { SITE_URL } from "./lib/site";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -26,8 +27,6 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
 });
-
-const SITE_URL = "https://fragrancestudios.ng";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
