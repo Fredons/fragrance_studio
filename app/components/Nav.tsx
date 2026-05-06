@@ -248,6 +248,14 @@ export function Nav() {
                   TikTok ↗
                 </a>
                 <a
+                  href="https://www.facebook.com/fragrancestudios/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-[var(--color-rule)] p-4 mono text-[10px] tracking-[0.22em] uppercase text-ink-soft hover:text-gold hover:border-gold transition-colors"
+                >
+                  Facebook ↗
+                </a>
+                <a
                   href="https://wa.me/2347066272462"
                   target="_blank"
                   rel="noreferrer"

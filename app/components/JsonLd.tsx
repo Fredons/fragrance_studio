@@ -22,6 +22,7 @@ export function JsonLd() {
     sameAs: [
       "https://www.instagram.com/fragrancestudios/",
       "https://www.tiktok.com/@fragrancestudios",
+      "https://www.facebook.com/fragrancestudios/",
       "https://www.deezer.com/us/artist/63278562",
     ],
     email: "fragrancestudios@gmail.com",

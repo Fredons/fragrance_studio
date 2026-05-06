@@ -80,6 +80,16 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="https://www.facebook.com/fragrancestudios/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-gold"
+                >
+                  Facebook ↗
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://wa.me/2347066272462"
                   target="_blank"
                   rel="noreferrer"

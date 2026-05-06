@@ -360,6 +360,21 @@ ${note || "—"}`;
                   </li>
                   <li>
                     <a
+                      href="https://www.facebook.com/fragrancestudios/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex items-center justify-between gap-3 text-ink hover:text-gold transition-colors"
+                    >
+                      <span className="font-[var(--font-serif)] italic text-[18px] md:text-[20px]">
+                        Facebook
+                      </span>
+                      <span className="mono text-[10px] tracking-[0.28em] uppercase group-hover:translate-x-1 transition-transform">
+                        /fragrancestudios ↗
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href={`https://wa.me/${studioPhone}`}
                       target="_blank"
                       rel="noreferrer"
