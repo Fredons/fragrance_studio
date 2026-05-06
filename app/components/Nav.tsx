@@ -240,12 +240,26 @@ export function Nav() {
                   Instagram ↗
                 </a>
                 <a
-                  href="https://www.facebook.com/fragrancestudios/"
+                  href="https://www.tiktok.com/@fragrancestudios"
                   target="_blank"
                   rel="noreferrer"
                   className="border border-[var(--color-rule)] p-4 mono text-[10px] tracking-[0.22em] uppercase text-ink-soft hover:text-gold hover:border-gold transition-colors"
                 >
-                  Facebook ↗
+                  TikTok ↗
+                </a>
+                <a
+                  href="https://wa.me/2347066272462"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-[var(--color-rule)] p-4 mono text-[10px] tracking-[0.22em] uppercase text-ink-soft hover:text-gold hover:border-gold transition-colors"
+                >
+                  WhatsApp ↗
+                </a>
+                <a
+                  href="mailto:fragrancestudios@gmail.com"
+                  className="border border-[var(--color-rule)] p-4 mono text-[10px] tracking-[0.22em] uppercase text-ink-soft hover:text-gold hover:border-gold transition-colors"
+                >
+                  Email ↗
                 </a>
               </div>
 

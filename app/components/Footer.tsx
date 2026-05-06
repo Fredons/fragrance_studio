@@ -70,20 +70,30 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/fragrancestudios/"
+                  href="https://www.tiktok.com/@fragrancestudios"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-gold"
                 >
-                  Facebook ↗
+                  TikTok ↗
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@fragrancestudios.ng"
+                  href="https://wa.me/2347066272462"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-gold"
+                >
+                  WhatsApp ↗
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:fragrancestudios@gmail.com"
                   className="hover:text-gold break-all"
                 >
-                  hello@fragrancestudios.ng
+                  fragrancestudios@gmail.com
                 </a>
               </li>
             </ul>

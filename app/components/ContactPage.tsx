@@ -15,8 +15,8 @@ const sessionTypes = [
   "Podcast",
 ];
 
-const studioPhone = ""; // Placeholder — fill with confirmed number, e.g. "2348012345678"
-const studioEmail = "hello@fragrancestudios.ng";
+const studioPhone = "2347066272462"; // +234 706 627 2462, digits only for wa.me
+const studioEmail = "fragrancestudios@gmail.com";
 
 type Errors = Partial<Record<"name" | "contact" | "type" | "note", string>>;
 
@@ -345,16 +345,31 @@ ${note || "—"}`;
                   </li>
                   <li>
                     <a
-                      href="https://www.facebook.com/fragrancestudios/"
+                      href="https://www.tiktok.com/@fragrancestudios"
                       target="_blank"
                       rel="noreferrer"
                       className="group flex items-center justify-between gap-3 text-ink hover:text-gold transition-colors"
                     >
                       <span className="font-[var(--font-serif)] italic text-[18px] md:text-[20px]">
-                        Facebook
+                        TikTok
                       </span>
                       <span className="mono text-[10px] tracking-[0.28em] uppercase group-hover:translate-x-1 transition-transform">
-                        /fragrancestudios ↗
+                        @fragrancestudios ↗
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={`https://wa.me/${studioPhone}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex items-center justify-between gap-3 text-ink hover:text-gold transition-colors"
+                    >
+                      <span className="font-[var(--font-serif)] italic text-[18px] md:text-[20px]">
+                        WhatsApp
+                      </span>
+                      <span className="mono text-[10px] tracking-[0.28em] uppercase group-hover:translate-x-1 transition-transform">
+                        +234 706 627 2462 ↗
                       </span>
                     </a>
                   </li>
