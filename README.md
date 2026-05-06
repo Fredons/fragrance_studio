@@ -39,7 +39,8 @@ Site URL (used by metadata, sitemap, robots and JSON-LD) is resolved by
 `app/lib/site.ts` in this order:
 
 1. `NEXT_PUBLIC_SITE_URL` — explicit override. Set this in Vercel env vars
-   when the custom domain goes live (e.g. `https://fragrancestudios.ng`).
+   when the custom domain goes live (e.g.
+   `https://www.fragrancestudios.com.ng`).
 2. `VERCEL_PROJECT_PRODUCTION_URL` — auto-injected by Vercel; resolves to
    the production alias (e.g. `fragrance-studio.vercel.app`).
 3. `VERCEL_URL` — per-deployment fallback.
